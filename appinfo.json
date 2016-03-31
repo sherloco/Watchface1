@@ -1,0 +1,31 @@
+{
+    "appKeys": {},
+    "capabilities": [
+        "configurable",
+        "health"
+    ],
+    "companyName": "sherloco",
+    "enableMultiJS": true,
+    "longName": "Watchface1",
+    "projectType": "native",
+    "resources": {
+        "media": [
+            {
+                "file": "fonts/LiquidCrystal-ExBold",
+                "name": "FONT_LIQUIDCRYSTAL_EXBOLD_48",
+                "targetPlatforms": null,
+                "type": "font"
+            }
+        ]
+    },
+    "sdkVersion": "3",
+    "shortName": "WF1",
+    "targetPlatforms": [
+        "chalk"
+    ],
+    "uuid": "15768a6f-9b82-4dd7-b250-4c170bf2ac7e",
+    "versionLabel": "0.0",
+    "watchapp": {
+        "watchface": true
+    }
+}
