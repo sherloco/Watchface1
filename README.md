@@ -1,2 +1,2 @@
 # watchface1
-A simple Watchface
+A simple watchface.
