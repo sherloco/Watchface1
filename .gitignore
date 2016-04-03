@@ -1,3 +1,23 @@
+/.cproject
+/.lock-waf_linux2_build
+/.project
+/build/.lock-waf_linux2_build
+/build/.wafpickle-linux2-34014960-98
+/build/c4che/_cache.py
+/build/c4che/build.config.py
+/build/c4che/chalk_cache.py
+/build/chalk/app_resources.pbpack
+/build/chalk/appinfo.auto.c
+/build/chalk/layouts.json
+/build/chalk/pebble-app.bin
+/build/chalk/pebble-app.raw.bin
+/build/chalk/pebble_app.ld.auto
+/build/chalk/resources/fonts/LiquidCrystal-ExBold.FONT_LIQUIDCRYSTAL_EXBOLD_48.reso
+/build/chalk/src/resource_ids.auto.h
+/build/chalk/system_resources.resball
+/build/config.log
+/build/pebble-app.map
+/build/watchface1.pbw
 # Object files
 *.o
 *.ko
