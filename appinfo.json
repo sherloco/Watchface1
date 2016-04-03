@@ -1,7 +1,6 @@
 {
     "appKeys": {},
     "capabilities": [
-        "configurable",
         "health"
     ],
     "companyName": "sherloco",
