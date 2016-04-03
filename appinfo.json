@@ -10,6 +10,12 @@
     "resources": {
         "media": [
             {
+                "file": "fonts/Perfect_Dos",
+                "name": "FONT_PERFECT_DOS_16",
+                "targetPlatforms": null,
+                "type": "font"
+            },
+            {
                 "file": "fonts/LiquidCrystal-ExBold",
                 "name": "FONT_LIQUIDCRYSTAL_EXBOLD_48",
                 "targetPlatforms": null,

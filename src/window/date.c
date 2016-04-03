@@ -18,7 +18,8 @@ void load_date(GRect bounds, Layer *window_layer){
       GRect(0, 40, bounds.size.w, 50));
 
   // Improve the layout to be more like a watchface
-  s_date_font = fonts_load_custom_font(fonts_get_system_font(FONT_KEY_GOTHIC_24_BOLD));
+  s_date_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_PERFECT_DOS_16));
+  //s_date_font = fonts_load_custom_font(fonts_get_system_font(FONT_KEY_GOTHIC_24_BOLD));
   text_layer_set_background_color(s_date_layer, GColorClear);
   text_layer_set_text_color(s_date_layer, GColorBlack);
   text_layer_set_font(s_date_layer, s_date_font);
