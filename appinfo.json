@@ -10,6 +10,15 @@
     "resources": {
         "media": [
             {
+                "file": "images/Background",
+                "name": "IMAGE_BACKGROUND_EXAMPLE",
+                "storageFormat": "png",
+                "targetPlatforms": [
+                    "chalk"
+                ],
+                "type": "bitmap"
+            },
+            {
                 "file": "fonts/Perfect_Dos",
                 "name": "FONT_PERFECT_DOS_16",
                 "targetPlatforms": null,

@@ -6,7 +6,7 @@ static GBitmap *s_background_bitmap;
 
 void load_background(GRect bounds, Layer *window_layer){
   // Create GBitmap
-  //s_background_bitmap = gbitmap_create_with_resource(RESOURCE_ID_BITMAP_BACKGROUND);
+  s_background_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BACKGROUND_EXAMPLE);
 
   // Create BitmapLayer to display the GBitmap
   s_background_layer = bitmap_layer_create(bounds);
