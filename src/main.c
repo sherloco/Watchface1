@@ -5,6 +5,7 @@
 #include "window/date.h"
 #include "window/background.h"
 #include "window/bluetooth.h"
+#include "handlerManager.h"
 
 #if defined(PBL_HEALTH)
 #include "window/health.h"
@@ -12,12 +13,6 @@
 
 static Window *s_main_window;
 
-static void tick_handler(struct tm *tick_time, TimeUnits units_changed) {
-  APP_LOG(APP_LOG_LEVEL_DEBUG, "tick_handler executed..");
-
-  update_time();
-  update_date();    
-}
 
 static void main_window_load(Window *window) {
   // Get information about the Window
@@ -59,26 +54,6 @@ static void init() {
     .load = main_window_load,
     .unload = main_window_unload
   });
-
-  // Register with TickTimerService
-  tick_timer_service_subscribe(MINUTE_UNIT, tick_handler);
-
-  //Register with Battery Service
-  battery_state_service_subscribe(battery_handler);
-
-  //Register with Blutooth Service
-  connection_service_subscribe((ConnectionHandlers) {
-    .pebble_app_connection_handler = bluetooth_handler
-  });
-
-  //Register with health service
-  #if defined(PBL_HEALTH)
-  if(!health_service_events_subscribe(health_handler, NULL)) {
-    APP_LOG(APP_LOG_LEVEL_ERROR, "Health not available!");
-  }
-  #else
-  APP_LOG(APP_LOG_LEVEL_ERROR, "Health not available!");
-  #endif
 
   // Show the Window on the watch, with animated=true
   window_stack_push(s_main_window, true);
