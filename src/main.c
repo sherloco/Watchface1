@@ -19,7 +19,7 @@ static void main_window_load(Window *window) {
   Layer *window_layer = window_get_root_layer(window);
   GRect bounds = layer_get_bounds(window_layer);
 
-  load_background(bounds, window_layer);  
+  //load_background(bounds, window_layer);  
 
   load_time(bounds, window_layer);
   load_date(bounds, window_layer);
@@ -36,7 +36,7 @@ static void main_window_unload(Window *window) {
   unload_date();
   unload_battery_circle();
   unload_bluetooth();
-  unload_background();
+  //unload_background();
   
   #if defined(PBL_HEALTH)
   unload_health();

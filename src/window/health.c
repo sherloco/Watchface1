@@ -1,5 +1,6 @@
 #include <pebble.h>
 #include "window/health.h"
+#include "handlerManager.h"
 
 static TextLayer *s_health_layer;
 static GFont s_health_font;
@@ -74,10 +75,12 @@ void health_handler(HealthEventType event, void *context) {
     case HealthEventMovementUpdate:
     APP_LOG(APP_LOG_LEVEL_DEBUG, "Received HealthEventMovementUpdate: %d", HealthEventMovementUpdate);
     update_steps();
+    handler_wake_up();
     break;
     case HealthEventSleepUpdate:
     APP_LOG(APP_LOG_LEVEL_DEBUG, "Received HealthEventSleepUpdate: %d", HealthEventSleepUpdate);
     update_sleep();
+    handler_sleep();
     break;
   }
 }

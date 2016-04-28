@@ -37,9 +37,15 @@ void handler_init(){
 }
 
 void handler_sleep(){
-  
+  tick_timer_service_unsubscribe();
+  battery_state_service_unsubscribe();
 }
 
 void handler_wake_up(){
+  tick_timer_service_subscribe(MINUTE_UNIT, tick_handler);
+  update_time();
+  update_date();
   
+  battery_state_service_subscribe(battery_handler);
+  battery_handler(battery_state_service_peek());
 }
